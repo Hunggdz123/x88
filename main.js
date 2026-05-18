@@ -1,11 +1,11 @@
-// Hiệu ứng quay cho cờ
+// Animation loading vòng tròn
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.service-card');
     
     cards.forEach(card => {
         const logo = card.querySelector('.logo-center');
         
-        // Không xoay - giữ tĩnh
+        // Không xoay - giữ tĩnh ở giữa
         if (logo) {
             logo.style.animation = 'none';
         }

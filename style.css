@@ -78,6 +78,7 @@
             color: #eee;
             margin-bottom: 60px;
             text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+            text-transform: uppercase;
         }
 
         .services {
@@ -122,53 +123,47 @@
 
         /* Vòng tròn */
         .circle-wrapper {
-            width: 280px;
-            height: 280px;
+            width: 160px;
+            height: 160px;
             margin: 0 auto 40px;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(circle, rgba(60,60,60,0.8) 0%, rgba(40,40,40,0.9) 100%);
             border-radius: 50%;
-            box-shadow: 
-                0 0 50px rgba(0,0,0,0.9),
-                inset 0 0 50px rgba(0,0,0,0.7);
             perspective: 1000px;
             transition: transform 0.6s linear;
         }
         .circle-wrapper::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 10px solid transparent;
-            border-top-color: #ffd700;
-            border-right-color: #ffd700;
-            top: 0;
-            left: 0;
-            box-shadow: inset 0 0 30px rgba(255,215,0,0.4);
+            display: none;
         }
         .circle-wrapper svg {
-            display: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
         }
         .circle-bg {
             fill: none;
-            stroke: rgba(255,255,255,0.12);
-            stroke-width: 14;
+            stroke: rgba(255,255,255,0.1);
+            stroke-width: 6;
         }
         .circle-progress {
             fill: none;
             stroke: #ffd700;
-            stroke-width: 14;
+            stroke-width: 6;
             stroke-linecap: round;
             stroke-dasharray: 440;
-            stroke-dashoffset: 0;
+            stroke-dashoffset: 440;
+            animation: spinLoadingBar 2.5s linear infinite;
         }
-        @keyframes spinCircle {
-            from { stroke-dashoffset: 440; }
-            to   { stroke-dashoffset: 0; }
+        @keyframes spinLoadingBar {
+            0% { 
+                stroke-dashoffset: 440;
+            }
+            100% { 
+                stroke-dashoffset: 0;
+            }
         }
         @keyframes rotateLogo {
             from { transform: rotateY(0deg); }
@@ -176,12 +171,12 @@
         }
 
         .logo-center {
-            width: 220px;
-            height: 220px;
-            min-width: 220px;
-            min-height: 220px;
-            max-width: 220px;
-            max-height: 220px;
+            width: 110px;
+            height: 110px;
+            min-width: 110px;
+            min-height: 110px;
+            max-width: 110px;
+            max-height: 110px;
             object-fit: contain;
             aspect-ratio: 1 / 1;
             transition: transform 0.3s ease;
@@ -189,6 +184,11 @@
             margin: 0;
             padding: 0;
             display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
         }
 
         /* Nút */
@@ -239,16 +239,16 @@
                 padding: 30px 40px 60px;
             }
             .circle-wrapper {
-                width: 240px;
-                height: 240px;
+                width: 140px;
+                height: 140px;
             }
             .logo-center {
-                width: 190px;
-                height: 190px;
-                min-width: 190px;
-                min-height: 190px;
-                max-width: 190px;
-                max-height: 190px;
+                width: 95px;
+                height: 95px;
+                min-width: 95px;
+                min-height: 95px;
+                max-width: 95px;
+                max-height: 95px;
             }
             .service-card {
                 padding: 30px 15px 40px;
@@ -276,16 +276,16 @@
                 gap: 20px;
             }
             .circle-wrapper {
-                width: 200px;
-                height: 200px;
+                width: 130px;
+                height: 130px;
             }
             .logo-center {
-                width: 160px;
-                height: 160px;
-                min-width: 160px;
-                min-height: 160px;
-                max-width: 160px;
-                max-height: 160px;
+                width: 85px;
+                height: 85px;
+                min-width: 85px;
+                min-height: 85px;
+                max-width: 85px;
+                max-height: 85px;
             }
             .service-card {
                 padding: 25px 15px 35px;
@@ -323,17 +323,17 @@
                 margin-bottom: 25px;
             }
             .circle-wrapper {
-                width: 150px;
-                height: 150px;
+                width: 110px;
+                height: 110px;
                 margin: 0 auto 20px;
             }
             .logo-center {
-                width: 120px;
-                height: 120px;
-                min-width: 120px;
-                min-height: 120px;
-                max-width: 120px;
-                max-height: 120px;
+                width: 85px;
+                height: 85px;
+                min-width: 85px;
+                min-height: 85px;
+                max-width: 85px;
+                max-height: 85px;
             }
             .service-card {
                 padding: 20px 10px 30px;
@@ -363,17 +363,17 @@
                 font-size: 0.8rem;
             }
             .circle-wrapper {
-                width: 130px;
-                height: 130px;
+                width: 100px;
+                height: 100px;
                 margin: 0 auto 15px;
             }
             .logo-center {
-                width: 100px;
-                height: 100px;
-                min-width: 100px;
-                min-height: 100px;
-                max-width: 100px;
-                max-height: 100px;
+                width: 65px;
+                height: 65px;
+                min-width: 65px;
+                min-height: 65px;
+                max-width: 65px;
+                max-height: 65px;
             }
             .service-card {
                 padding: 18px 8px 28px;
