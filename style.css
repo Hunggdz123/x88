@@ -10,6 +10,7 @@
             line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
+            width: 100%;
         }
 
         /* Video nền + Overlay */
@@ -53,8 +54,7 @@
             object-fit: contain;
             display: block;
             margin: 0 auto;
-            max-width: 90%;
-            padding: 20px 0;
+            max-width: 95%;
         }
 
         .container { 
@@ -63,8 +63,6 @@
             padding: 40px 60px 80px;
             position: relative;
             z-index: 2;
-            width: 100%;
-            overflow-x: hidden;
         }
 
         .section-title {
@@ -117,6 +115,12 @@
             justify-content: center;
             width: 100%;
         }
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 215, 0, 0.12);
+        }
+
+        /* Vòng tròn */
         .circle-wrapper {
             width: 280px;
             height: 280px;
@@ -132,7 +136,6 @@
                 inset 0 0 50px rgba(0,0,0,0.7);
             perspective: 1000px;
             transition: transform 0.6s linear;
-            z-index: 1;
         }
         .circle-wrapper::after {
             content: '';
@@ -146,8 +149,6 @@
             top: 0;
             left: 0;
             box-shadow: inset 0 0 30px rgba(255,215,0,0.4);
-            pointer-events: none;
-            z-index: 0;
         }
         .circle-wrapper svg {
             display: none;
@@ -186,14 +187,8 @@
             transition: transform 0.3s ease;
             filter: drop-shadow(0 0 15px rgba(255,215,0,0.5));
             margin: 0;
-            flex-shrink: 0;
             padding: 0;
             display: block;
-            position: relative;
-            z-index: 2;
-        }
-        .service-card:hover .logo-center {
-            transform: none;
         }
 
         /* Nút */
@@ -209,10 +204,21 @@
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
         .btn-experience:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(255, 215, 0, 0.7);
+        }
+        .btn-experience:active {
+            transform: translateY(-1px);
         }
 
         .service-card h3 {
@@ -223,71 +229,55 @@
             text-shadow: 0 2px 6px rgba(0,0,0,0.7);
         }
 
-        /* Desktop - Luôn 4 cột nằm ngang, căn giữa */
-        @media (min-width: 1201px) {
-            .services {
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 1400px;
-            }
-        }
-
-        /* Tablet - 2 cột */
+        /* Responsive - Tablet và Desktop nhỏ */
         @media (max-width: 1200px) {
             .services { 
                 grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
+                gap: 25px;
             }
             .container {
                 padding: 30px 40px 60px;
-            }
-            .section-title {
-                font-size: 2.2rem;
             }
             .circle-wrapper {
                 width: 240px;
                 height: 240px;
             }
             .logo-center {
-                width: 160px;
-                height: 160px;
-                min-width: 160px;
-                min-height: 160px;
-                max-width: 160px;
-                max-height: 160px;
+                width: 190px;
+                height: 190px;
+                min-width: 190px;
+                min-height: 190px;
+                max-width: 190px;
+                max-height: 190px;
             }
             .service-card {
-                padding: 40px 20px 50px;
+                padding: 30px 15px 40px;
             }
-            .service-card h3 {
-                font-size: 1.5rem;
-            }
-        
+        }
 
         /* Responsive - Tablet */
         @media (max-width: 768px) {
             .top-logo img { 
-                width: 80%;
-                max-width: 340px;
-            }
-            .services { 
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
+                width: 90%;
+                max-width: 300px;
             }
             .container {
                 padding: 25px 20px 50px;
             }
             .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 8px;
+                font-size: 2rem;
             }
             .section-subtitle {
                 font-size: 1rem;
                 margin-bottom: 40px;
             }
+            .services { 
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
             .circle-wrapper {
                 width: 200px;
                 height: 200px;
-                margin: 0 auto 30px;
             }
             .logo-center {
                 width: 160px;
@@ -298,16 +288,13 @@
                 max-height: 160px;
             }
             .service-card {
-                padding: 30px 15px 40px;
-                border-radius: 16px;
+                padding: 25px 15px 35px;
             }
             .service-card h3 {
-                font-size: 1.2rem;
-                min-height: 40px;
-                margin-bottom: 15px;
+                font-size: 1.3rem;
             }
             .btn-experience {
-                padding: 12px 24px;
+                padding: 12px 28px;
                 font-size: 0.95rem;
                 margin-top: 15px;
             }
@@ -317,65 +304,28 @@
         @media (max-width: 480px) {
             .top-logo img { 
                 width: 85%;
-                max-width: 280px;
+                max-width: 250px;
+                padding-top: 15px;
             }
             .services { 
                 grid-template-columns: 1fr;
-                gap: 25px;
+                gap: 15px;
             }
             .container {
-                padding: 20px 15px 40px;
-                max-width: 100%;
+                padding: 15px 12px 30px;
             }
             .section-title {
-                font-size: 1.5rem;
-                margin-bottom: 5px;
+                font-size: 1.4rem;
+                margin-bottom: 8px;
             }
             .section-subtitle {
-                font-size: 0.9rem;
-                margin-bottom: 30px;
-            }
-            .circle-wrapper {
-                width: 170px;
-                height: 170px;
-                margin: 0 auto 25px;
-            }
-            .logo-center {
-                width: 140px;
-                height: 140px;
-                min-width: 140px;
-                min-height: 140px;
-                max-width: 140px;
-                max-height: 140px;
-                filter: drop-shadow(0 0 10px rgba(255,215,0,0.4));
-            }
-            .service-card {
-                padding: 25px 12px 35px;
-                border-radius: 12px;
-            }
-            .service-card h3 {
-                font-size: 1rem;
-                min-height: auto;
-                margin-bottom: 12px;
-            }
-            .btn-experience {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-                margin-top: 12px;
-            }
-        }
-
-        /* Responsive - Small Mobile */
-        @media (max-width: 360px) {
-            .top-logo img { 
-                width: 90%;
-            }
-            .section-title {
-                font-size: 1.3rem;
+                font-size: 0.85rem;
+                margin-bottom: 25px;
             }
             .circle-wrapper {
                 width: 150px;
                 height: 150px;
+                margin: 0 auto 20px;
             }
             .logo-center {
                 width: 120px;
@@ -385,6 +335,51 @@
                 max-width: 120px;
                 max-height: 120px;
             }
+            .service-card {
+                padding: 20px 10px 30px;
+            }
+            .service-card h3 {
+                font-size: 0.95rem;
+                min-height: auto;
+                margin-bottom: 15px;
+            }
+            .btn-experience {
+                padding: 10px 24px;
+                font-size: 0.9rem;
+                margin-top: 12px;
+            }
         }
-        } 
-    
+
+        /* Responsive - Small Mobile */
+        @media (max-width: 360px) {
+            .top-logo img { 
+                width: 85%;
+                max-width: 220px;
+            }
+            .section-title {
+                font-size: 1.2rem;
+            }
+            .section-subtitle {
+                font-size: 0.8rem;
+            }
+            .circle-wrapper {
+                width: 130px;
+                height: 130px;
+                margin: 0 auto 15px;
+            }
+            .logo-center {
+                width: 100px;
+                height: 100px;
+                min-width: 100px;
+                min-height: 100px;
+                max-width: 100px;
+                max-height: 100px;
+            }
+            .service-card {
+                padding: 18px 8px 28px;
+            }
+            .service-card h3 {
+                font-size: 0.85rem;
+            }
+        }
+        
