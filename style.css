@@ -123,8 +123,8 @@
 
         /* Vòng tròn */
         .circle-wrapper {
-            width: 160px;
-            height: 160px;
+            width: 128px;
+            height: 128px;
             margin: 0 auto 40px;
             position: relative;
             display: flex;
@@ -171,12 +171,12 @@
         }
 
         .logo-center {
-            width: 110px;
-            height: 110px;
-            min-width: 110px;
-            min-height: 110px;
-            max-width: 110px;
-            max-height: 110px;
+            width: 88px;
+            height: 88px;
+            min-width: 88px;
+            min-height: 88px;
+            max-width: 88px;
+            max-height: 88px;
             object-fit: contain;
             aspect-ratio: 1 / 1;
             transition: transform 0.3s ease;
@@ -239,16 +239,16 @@
                 padding: 30px 40px 60px;
             }
             .circle-wrapper {
-                width: 140px;
-                height: 140px;
+                width: 112px;
+                height: 112px;
             }
             .logo-center {
-                width: 95px;
-                height: 95px;
-                min-width: 95px;
-                min-height: 95px;
-                max-width: 95px;
-                max-height: 95px;
+                width: 76px;
+                height: 76px;
+                min-width: 76px;
+                min-height: 76px;
+                max-width: 76px;
+                max-height: 76px;
             }
             .service-card {
                 padding: 30px 15px 40px;
@@ -276,16 +276,16 @@
                 gap: 20px;
             }
             .circle-wrapper {
-                width: 130px;
-                height: 130px;
+                width: 104px;
+                height: 104px;
             }
             .logo-center {
-                width: 85px;
-                height: 85px;
-                min-width: 85px;
-                min-height: 85px;
-                max-width: 85px;
-                max-height: 85px;
+                width: 68px;
+                height: 68px;
+                min-width: 68px;
+                min-height: 68px;
+                max-width: 68px;
+                max-height: 68px;
             }
             .service-card {
                 padding: 25px 15px 35px;
@@ -323,17 +323,17 @@
                 margin-bottom: 25px;
             }
             .circle-wrapper {
-                width: 110px;
-                height: 110px;
+                width: 88px;
+                height: 88px;
                 margin: 0 auto 20px;
             }
             .logo-center {
-                width: 85px;
-                height: 85px;
-                min-width: 85px;
-                min-height: 85px;
-                max-width: 85px;
-                max-height: 85px;
+                width: 68px;
+                height: 68px;
+                min-width: 68px;
+                min-height: 68px;
+                max-width: 68px;
+                max-height: 68px;
             }
             .service-card {
                 padding: 20px 10px 30px;
@@ -363,17 +363,17 @@
                 font-size: 0.8rem;
             }
             .circle-wrapper {
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
                 margin: 0 auto 15px;
             }
             .logo-center {
-                width: 65px;
-                height: 65px;
-                min-width: 65px;
-                min-height: 65px;
-                max-width: 65px;
-                max-height: 65px;
+                width: 52px;
+                height: 52px;
+                min-width: 52px;
+                min-height: 52px;
+                max-width: 52px;
+                max-height: 52px;
             }
             .service-card {
                 padding: 18px 8px 28px;
